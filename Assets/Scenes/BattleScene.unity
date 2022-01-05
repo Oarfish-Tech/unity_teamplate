@@ -167,11 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55db9818f5d21aa42b6cf90533f366bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Q:
-    Text: 
-    Choices: []
-    Explanation: 
-  QJson: {fileID: 4900000, guid: d76fc0d146e99d04dbaa825d981c8be5, type: 3}
+  QJson: {fileID: 4900000, guid: e01405de382082243a9efe95ea9a0fb0, type: 3}
   UiDoc: {fileID: 2088691696}
   battleHud: {fileID: 2088691697}
 --- !u!1 &92031076
@@ -451,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGlobal: 1
+  m_IsGlobal: 1
   priority: 0
   blendDistance: 0
   weight: 1
@@ -753,11 +749,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 8766665531896621133, guid: 7df41fb0413d230418e1cd627dad5932, type: 3}
-  enemyPrefab: {fileID: 8766665531896621133, guid: c18b992b6e51259479fd2bed3075443d, type: 3}
+  enemyPrefab: {fileID: 8766665531896621133, guid: 5a2d8613ae2be8c4088a977a6725dec6, type: 3}
+  enemiesArray:
+  - {fileID: 8766665531896621133, guid: c18b992b6e51259479fd2bed3075443d, type: 3}
+  - {fileID: 8766665531896621133, guid: 77aca9d1767dc524b8b5e8d44bd0d434, type: 3}
+  - {fileID: 8766665531896621133, guid: 5a2d8613ae2be8c4088a977a6725dec6, type: 3}
   _Dynamic: {fileID: 642886292}
   battleStation: {fileID: 1953265286}
   battleHudDoc: {fileID: 2088691696}
   battleHud: {fileID: 2088691697}
+  questionBuilder: {fileID: 34792284}
   state: 0
 --- !u!1 &1653088043
 GameObject:
@@ -1332,8 +1333,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0.5
-  m_PointLightOuterRadius: 1.5
+  m_PointLightInnerRadius: 0.57
+  m_PointLightOuterRadius: 2.11
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1

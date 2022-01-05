@@ -1,0 +1,697 @@
+{
+    "records": [
+        {
+            "question": "4 percent of s is qual to 3 percent of t, where s > 0 and t > 0. A: s, B: t",
+            "answers": [
+                "Quntity B is Greater",
+                "Quantity A is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "rt < 0 < -r. A: t, B: 0",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "x > y. A: |x+y| B: |x - y|",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In the xy-plane, the points (a, 0) and (0,b) are on the line whose equation is y = 0.5x + 10. A: a B: b",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "One person is to be selected at random from a group of 25 people. The probability that the selected person will be male is 0.44, and the probability that the selected person with be male who was born before 1960 is 0.28. A: The number of males in the group who were born in 1960 or later B: 4",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If (a-b)/(a+b) = 2 and b = 1, what is the value of a?",
+            "answers": [
+                "-3",
+                "1",
+                "0",
+                "-2"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "The floor space in a certain market is rented for $15 per 30 wquare feet for one day. In the market, Alice rented a rectanular floor space that measured 8 feet by 15 feet, and Betty rented a rectangular floor space that measured 15 feet by 20 feet, If each woman rented her floor space for one day, how much more did Betty pay than Alice?",
+            "answers": [
+                "90",
+                "180",
+                "27",
+                "36"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A business owner obtained a $6,000 loan at a simple annual interest rate of r percent in order to purchase a computer. After one year, the owner made a single payment of $6,840 to repay the loan, including the interest, What is the value of r?",
+            "answers": [
+                "14.0",
+                "16.8",
+                "7.0",
+                "8.4"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If (5^(5x))(25) = 5^n, where n and x are integers, what is the value of n in terms of x?",
+            "answers": [
+                "5x+2",
+                "10x",
+                "10x+2",
+                "5x+2"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Of the 180 judges appointed by a sertain president, 30 percent were women and 25 percent were from minority groups, If 1/9 of the women appointed were from minority groups, how many of the judges appointed were neither womennor from minority groups?",
+            "answers": [
+                "87",
+                "93",
+                "99",
+                "75"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If an integer is divisible by both 8 and 15, then the integer also must be divisble by which of the following?",
+            "answers": [
+                "24",
+                "16",
+                "32",
+                "36"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A certain experiment has three possible outcomes. The outcomes are mutually exclusive and have probabilities p, p/2, and p/4, respictively. What is the value of p?",
+            "answers": [
+                "4/7",
+                "5/7",
+                "1/7",
+                "2/7"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "The length of each side of eauilateral trangle T is 6 times the length of each side of equilateral triangle X. A: The ratio of the length of one side of T to the length of another side of T B: The ratio of the length of one side of X to the length of another side of X",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Of 30 theater tickets sold, 20 tickets were sold at prices between $10 and $30 each and 10 tickets were sold at prices between $40 and $60 each. A: The average of the prices of the 30 tickets B: $50",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "x > 1. A: x/(x+1) B: (-x)/(1-x)",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In the xy-plane, the point (1,2) is on line j, and the point (2,1) is on line k. Each of the lines has a positive slope. A: The slope of line j B: The slope of line k",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "T is a list of 100 different numbers that are greater than 0 and less than 50. The number x is greater than 60 percent of the numbers in T, and the number y is greater than 40 percent of the numbers in T. A: x-y B: 20",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "n is a positive integer. A: The remainder when n is divided by 5 B: The remainder when n+10 is divided by 5",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A right circular cylinder with radius 2 inches has volume 15 cubic inches. A: The height of the cylinder B: 2 inches",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "k is an integer for which 1/2^(1-k) < 1/8. A: k B: -2",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "n is an integer greater than 0. A: The number of different prime factors of 9n B: The number of different prime factors of 8n",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Working at their respective constant rates, machine I makes 240 copies in 8 minutes and machine II makes 240 copies in 5 minues. At these rates, how many more copies does machine II make in 4 minutes than machine I makes in 6 minutes?",
+            "answers": [
+                "12",
+                "15",
+                "20",
+                "24"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In the xy-plane, points R and S have cooridinates (-2,1) and (4,-7), respectively. If point P is the midpoint of line segment RS, what are the coordinates of point P?",
+            "answers": [
+                "(1,-3)",
+                "(2,-4)",
+                "(3,-4)",
+                "(-1,-3)"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Steve's property tax is $140 less than Patricia's property tax. If steve's property tax is $1,960, then Steves property tax is what percent less than Patricia's property tax, to the nearest 0.1 percent?",
+            "answers": [
+                "6.7%",
+                "7.1%",
+                "7.5%",
+                "7.9%"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A base of a triangle has length b, the altitude corresponding to the base has length h, and b = 2h. Which of the folowing expresses the area fo the triangle, in terms of h?",
+            "answers": [
+                "h^2",
+                "3h^2/2",
+                "2h^2",
+                "h^2/2"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "How many different two-digit positive integers are there in which the tens digit is greater than 6 and the units digit is less than 4?",
+            "answers": [
+                "12",
+                "24",
+                "7",
+                "9"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If y^(-2) + 2y^(-1) - 15 = 0, which of the following could be the value of y?",
+            "answers": [
+                "-1/5",
+                "-1/3",
+                "-5",
+                "3"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "w , x , and y are positive integers. w + x + y = 90. A: Average of w, x, and y B: Median of w, x, and y",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "-2 < p < q < -1 A: -(p+q) B: 1",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "List A consists fo the numbers x, x+2, x+4, x+6 and x+8. List B consists of the numbers x+10, x+12, x+14, and x+18. A: The standard deviation of the numbers in List A B: The standard deviation of the numbers in List B",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "10 < a < 12. 4 < b < 5. A: a^2/2 B: 32",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Two sides of a triangle have lengths 7 and 4 A: Length of the third side of triangle B: 3",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "a > b > c > d > e A: The everage of a, c, and e B: The average of b and d",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "x and y are integers greater than 5. x is y percent of x^2 A: x B: 10",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In Ophiuchus Corporation, 60% of the total revenue R is devoted to the advertising budget. Five-sixths of this advertising budget was spent on television advertising. Which of the following represents the dollar amount spent on television advertising?",
+            "answers": [
+                "R/2",
+                "R/3",
+                "2R/3",
+                "2R/5"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Astronomers determine that a certain square region in interstellar space has an area of approximately�2.4 \\times 10^72.4_10_7__�(light-years)2, where a light-year is a unit of�astronomical distance.� Assuming that this region is a square, then a single side of the square would be approximately how many light-years long?",
+            "answers": [
+                "5*10^3",
+                "2.5*10^5",
+                "2.5*10^3",
+                "5*10^5"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If p = 6 + 3�_2___�and q = 6 _ 3�_2___, then p^2�+ 2pq + q^2�=",
+            "answers": [
+                "144",
+                "72 _ 6�_2___",
+                "120 _ 6�_2___",
+                "144 _ 6�_2___"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "When a large municipal water tank is empty, it takes a Type JQ pump, working alone, 72 hours to fill the tank, whereas as Type JT pump, working alone, would take only 18 hours to fill the tank completely. �If the tank starts at half full, how long would it take two Type JQ pumps and a Type JT pump, all three pumps working together, to fill the tank?",
+            "answers": [
+                "6",
+                "4",
+                "9",
+                "12"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "How many positive integers less than 100 have a remainder of 2 when divided by 13?",
+            "answers": [
+                "8",
+                "7",
+                "6",
+                "9"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "The right triangle�ABC has side lengths 10���x, 9 ��x, and 8 � x. Given that only one value of x is possible, which of the following statements is true?",
+            "answers": [
+                "The perimeter of ABC must be greater than 10",
+                "None of the above statements is true",
+                "ABC is isosceles",
+                "The area of ABC cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "The gallery hinted at the curator�s affinity for� ______________� works: despite an overarching theme to the exhibit, the pieces ranged from Incan pottery to African tribal masks.",
+            "answers": [
+                "eclectic",
+                "revitalized",
+                "veritable",
+                "forgotten"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "While symmetry is often cited as the reason humans�and most other vertebrates�have two eyes, ______________ was clearly also�part of nature�s plan: though our binocular vision would be greatly diminished, we would still be able to see with only one eye.",
+            "answers": [
+                "redundancy",
+                "irregularity",
+                "frugality",
+                "indispensability"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "If 3x + 43 = 8 - 2x what is the value of x ?",
+            "answers": [
+                "-7",
+                "-3",
+                "4",
+                "7"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Which of the following numbers is farthest from the number 1 on the number line?",
+            "answers": [
+                "-11",
+                "-5",
+                "0",
+                "5"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A car got 35 miles per gallon using gasoline that cost $3.97 per gallon. Approximately what was the cost, in dollars, of the gasoline used in driving the car 300 miles?",
+            "answers": [
+                "$34",
+                "$14",
+                "$24",
+                "$44"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A certain jar contains 60 jelly beans � 22 white, 18 green, 11 yellow, 6 red, and 3 purple. If a jelly bean is to be chosen at random, what is the probability that the jelly bean will be neither red nor purple?",
+            "answers": [
+                "0.85",
+                "0.09",
+                "0.15",
+                "0.54"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Although it does contain some fresh ideas, I would hardly describe the work as __________.",
+            "answers": [
+                "original",
+                "orthodox",
+                "eccentric",
+                "trifling"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "It was her view that the nation�s problems had been _______ by social media, so that to ask for such assistance again would be counterproductive.",
+            "answers": [
+                "exacerbated",
+                "ameliorated",
+                "ascertained",
+                "diagnosed"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "The professor regared the student's theory with ________, considereing the overall idea creative, but the logic behind the specific details unsound",
+            "answers": [
+                "ambivalence",
+                "consternation",
+                "indefference",
+                "condescension"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "Dylan's unwavering belief in the priority of self-interest was tantamoun to _______: he took it as axiomatic that, since he could never be the others' beliefs or desires, he should focus only on his own.",
+            "answers": [
+                "solipsism",
+                "negligence",
+                "fortitude",
+                "determinism"
+            ],
+            "explain": "",
+            "category": "Reading"
+        },
+        {
+            "question": "A: 2^60 B: 8^20",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "x^2 - 5x = 6 - y^2 + 3y = 9y + 9 A: x B: y",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Working at a constant rate, Bob can produce x/3 widgets in 8 minutes. Working at a constant rate, Jack can produce 2x widgets in 40 minutes, where x > 0. A: The number of minutes it will take Bob to produce 5x widgets B: The number of minutes it will take Jack to produce 6x widgets",
+            "answers": [
+                "The two quantities are equal",
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "From 1992 to 1993, the price of a home increased by x%. From 1993 to 1994, the price of the home then decreased by x%. A: The price of the home at the beginning of 1992 B: The price of the home at the beginning of 1994",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "A: The product of the consecutive integers from 20 through 73, inclusive B: The product of the consecutive integers from 18 through 72, inclusive",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Line p is defined by the equation 2y+3x = 6 A: The y-intercept of line p B: The x-intercept of line p",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "The length of rectangle x is 20% greater than the length of rectangle y. The width of rectangle x is 20% less than the width of rectangle y. A: The area of rectangle x B: the area of ractangle y",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If the function f(x) is defines as f(x) = 3(x+2) + 5, then f(a-2) = ",
+            "answers": [
+                "3a + 5",
+                "3a - 6",
+                "3a + 11",
+                "3a - 1"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If the ration of stocks to bonds in a certain portfolio is 5:3, then which of the following cannot be the total number of stocks and bonds",
+            "answers": [
+                "50",
+                "200",
+                "120",
+                "160"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "Five friends agree to split the cost of a lunch equaly, If one of the friends does not attend the lunch, the remaining four friends would each have to pay an additional $6, What is the cost of the lunch?",
+            "answers": [
+                "120",
+                "24",
+                "80",
+                "100"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "If a six-sided die is rolled three times, what is the probability that the die will land on an even number exactly twice and an odd number exactly once?",
+            "answers": [
+                "3/8",
+                "1/4",
+                "7/8",
+                "1/2"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In 1998, the list price of a home was 1/3 greater than the original price. In 2008, the list price of the home was 1/2 greater than the original price. By what percent did the list price of the home increase from 1998 to 2008?",
+            "answers": [
+                "12.5%",
+                "50%",
+                "16.67%",
+                "33.67%"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "On the xy-plane, the center of circle O is at point (3,2). If the point (10,2) lies outside of the circle and the point (3,8) lies inside of the circle, which of the following could be the radius of the circle?",
+            "answers": [
+                "6.5",
+                "5.5",
+                "6",
+                "7"
+            ],
+            "explain": "",
+            "category": "Math"
+        }
+    ]
+}

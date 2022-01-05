@@ -1,0 +1,46 @@
+#QuestionRadioGroup > .unity-label {
+    background-color: rgba(255, 255, 255, 0);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    border-left-color: rgb(15, 26, 26);
+    border-right-color: rgb(15, 26, 26);
+    border-top-color: rgb(15, 26, 26);
+    border-bottom-color: rgb(15, 26, 26);
+    margin-bottom: 55px;
+    font-size: 30px;
+}
+
+.unity-label {
+    color: white;
+    overflow: scroll;
+    white-space: normal;
+    font-size: 25px;
+}
+
+.unity-base-field__input {
+    margin-left: 15px;
+}
+
+.unity-base-field__input .unity-label {
+    margin-left: 15px;
+}
+
+.unity-radio-button {
+    margin-left: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 0;
+    border-left-color: rgba(15, 26, 26, 255);
+    border-right-color: rgba(15, 26, 26, 255);
+    border-top-color: rgba(15, 26, 26, 255);
+    border-bottom-color: rgba(15, 26, 26, 255);
+    border-top-width: 5px;
+}

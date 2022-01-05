@@ -1,0 +1,48 @@
+{
+    "records": [
+        {
+            "question": "4 percent of s is qual to 3 percent of t, where s > 0 and t > 0. A: s, B: t",
+            "answers": [
+                "Quntity B is Greater",
+                "Quantity A is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "rt < 0 < -r. A: t, B: 0",
+            "answers": [
+                "Quntity A is Greater",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "x > y. A: |x+y| B: |x - y|",
+            "answers": [
+                "The relationship cannot be determined from the information given",
+                "Quantity B is greater",
+                "The two quantities are equal",
+                "Quntity A is Greater"
+            ],
+            "explain": "",
+            "category": "Math"
+        },
+        {
+            "question": "In the xy-plane, the points (a, 0) and (0,b) are on the line whose equation is y = 0.5x + 10. A: a B: b",
+            "answers": [
+                "Quantity B is greater",
+                "Quntity A is Greater",
+                "The two quantities are equal",
+                "The relationship cannot be determined from the information given"
+            ],
+            "explain": "",
+            "category": "Math"
+        }
+    ]
+}

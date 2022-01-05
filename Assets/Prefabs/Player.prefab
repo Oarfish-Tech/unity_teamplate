@@ -132,6 +132,6 @@ MonoBehaviour:
   unitName: Player
   unitLevel: 999
   damage: 1
-  maxHP: 10
-  currentHP: 10
+  maxHP: 90
+  currentHP: 90
   unitUIContainer: PlayerContainer

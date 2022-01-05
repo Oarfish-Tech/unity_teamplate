@@ -1,0 +1,23 @@
+.unity-button {
+    font-size: 85px;
+    flex-shrink: 0;
+    overflow: visible;
+    -unity-text-align: upper-center;
+    flex-wrap: nowrap;
+    display: flex;
+    position: relative;
+    flex-basis: auto;
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    -unity-font-style: bold;
+    margin-bottom: 35px;
+    color: rgb(210, 210, 210);
+    margin-top: 35px;
+}
+
+.unity-button:hover {
+    color: rgb(209, 56, 156);
+}
