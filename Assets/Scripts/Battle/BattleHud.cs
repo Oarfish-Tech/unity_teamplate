@@ -94,21 +94,4 @@ public class BattleHud : MonoBehaviour
         RadioButtonGroup.parent.style.display = DisplayStyle.Flex;
         RadioButtonGroup.SetEnabled(true);
     }
-
-    //Tween Animations
-
-    // public IEnumerator HpDamageAnimation(Unit unit, int previousHp) {
-    //     var unitContainer = RootElement.Q<VisualElement>(unit.unitUIContainer);
-    //     var hpFill = unitContainer.Q<VisualElement>("UnitHpFill");
-    //     float endWidth = (unit.currentHP/unit.maxHP)*100;
-    //     var wat = hpFill.style.width.value.value;
-    //     Debug.Log($"endwith: {endWidth}");
-    //     Debug.Log($"worldBoundWidth: {100f-wat}");
-
-
-    //     var hpReduce = DOTween.To(() => hpFill.style.width.value.value, x => hpFill.style.width = Length.Percent(x), endWidth, 5f).SetEase(Ease.Linear);
-    //     yield return hpReduce.WaitForCompletion();
-
-    //     var hpShake = unitContainer.transform;
-    // }
 }

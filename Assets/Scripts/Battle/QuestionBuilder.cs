@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -63,9 +65,11 @@ public class QuestionBuilder : MonoBehaviour
         }
     }
 
-    private Root RequestQuestions(TextAsset wat)
+    private Root RequestQuestions()
     {
-        _questions = JsonUtility.FromJson<Root>(wat.text);
+        using var client = new HttpClient();
+        var content = client.GetStringAsync("https://mfpd1xxqx7.execute-api.us-east-2.amazonaws.com//QA/QA/Search?count=9999&category=math").Result;
+        _questions = JsonUtility.FromJson<Root>(content);
 
         var rnd = new System.Random();
         _questions.records = _questions.records.OrderBy(question => rnd.Next()).ToList();
@@ -75,21 +79,20 @@ public class QuestionBuilder : MonoBehaviour
             record.answers = record.answers.OrderBy(ans => rnd.Next()).ToList();
             record.answerIndex = record.answers.IndexOf(answer);
         });
-
         return _questions;
     }
 
     public Root GetQuestions()
     {
         if (_questions == null)
-            _questions = RequestQuestions(QJson);        
+            _questions = RequestQuestions();
         return _questions;
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        _questions = RequestQuestions(QJson);
+        _questions = RequestQuestions();
     }
 
     // Update is called once per frame
