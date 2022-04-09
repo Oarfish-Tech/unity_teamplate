@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3baf6bb9feab64b9d9aa457916fd57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: BlueCroc
+  unitName: Blue Croc
   unitLevel: 10
   damage: 1
   maxHP: 5

@@ -34,13 +34,13 @@ public class Unit : MonoBehaviour
 
 	public IEnumerator DamageAnimation() {
 		transform.localScale = Vector3.one;
-		Tween damageAni = transform.DOPunchScale(new Vector3(-0.75f, -0.25f), 0.25f, 10, 1);
+		Tween damageAni = transform.DOPunchScale(new Vector3(-0.95f, -0.45f), 0.5f, 10, 1);
 		yield return damageAni.WaitForCompletion();
 	}
 
 	public IEnumerator AttackAnimation() {
 		transform.localScale = Vector3.one;
-		var attackAni = transform.DOPunchScale(new Vector3(0.75f, 0.75f), 0.5f, 0, 0);
+		var attackAni = transform.DOPunchScale(new Vector3(1.5f, 1.5f), 0.5f, 0, 0);
 		yield return attackAni.WaitForCompletion();
 	}
 

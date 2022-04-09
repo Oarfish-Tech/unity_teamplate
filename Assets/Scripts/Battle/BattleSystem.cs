@@ -9,7 +9,7 @@ using System.Linq;
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
-    private const float DIALOGUE_WAIT = 1f;
+    private const float DIALOGUE_WAIT = 3f;
     private int _questionIndex = 0;
 
     public GameObject playerPrefab;
@@ -17,6 +17,7 @@ public class BattleSystem : MonoBehaviour
     private GameObject _enemyGO;
 
     public GameObject[] enemiesArray;
+    public GameObject[] background;
 
     public Transform _Dynamic;
     public Transform battleStation;
@@ -145,6 +146,7 @@ public class BattleSystem : MonoBehaviour
         enemyPrefab = enemiesArray[_currentEnemyIndex];
         _enemyGO = Instantiate(enemyPrefab, battleStation);
         enemyUnit = _enemyGO.GetComponent<Unit>();
+        enemyUnit.unitLevel = _currentEnemyIndex + 1;
 
         rootHudEle = battleHudDoc.rootVisualElement;
         battleHud.SetUnitHud(playerUnit);
@@ -247,6 +249,17 @@ public class BattleSystem : MonoBehaviour
             Destroy(_enemyGO);
             StartCoroutine(OnEnemyDefeat());
             _currentEnemyIndex++;
+            if (_currentEnemyIndex > 2)
+            {
+                background[0].SetActive(false);
+                background[1].SetActive(true);
+                background[2].SetActive(false);
+            } else if (_currentEnemyIndex > 5)
+            {
+                background[0].SetActive(false);
+                background[1].SetActive(false);
+                background[2].SetActive(true);
+            }
             state = BattleState.START;
             BattleFsm();
         }
