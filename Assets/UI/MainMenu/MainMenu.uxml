@@ -1,12 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/MainMenu/MainMenu.uss?fileID=7433441132597879392&amp;guid=85208c30ec618db4a80b42b0311d3f5b&amp;type=3#MainMenu" />
-    <ui:VisualElement name="MainMenuBackground" style="flex-shrink: 0; flex-grow: 1; padding-top: 45px; background-color: rgb(56, 56, 56); background-image: url(&apos;project://database/Assets/Sprites/Background/MainMenu/bg.png?fileID=2800000&amp;guid=b12b45cfba239774c9de8cc805a10528&amp;type=3#bg&apos;); -unity-background-scale-mode: scale-and-crop;">
-        <ui:VisualElement name="MainMenuTitle">
-            <ui:Label text="Math Saves The World" display-tooltip-when-elided="true" style="font-size: 145px; white-space: normal; -unity-text-align: upper-center; color: rgb(210, 210, 210);" />
-        </ui:VisualElement>
-        <ui:VisualElement name="MainMenuControls" style="padding-left: 0; flex-grow: 1; padding-right: 0; padding-top: 0; padding-bottom: 0; -unity-text-align: upper-left; align-items: center; justify-content: center;">
-            <ui:Button text="Start Game" display-tooltip-when-elided="true" name="StartNewBtn" />
-            <ui:Button text="Quit Game" display-tooltip-when-elided="true" name="QuitGameBtn" />
+    <ui:VisualElement name="MainMenuBackground" style="flex-shrink: 0; flex-grow: 1; padding-top: 0; background-color: rgb(56, 56, 56); background-image: url(&apos;project://database/Assets/Sprites/UI/Menu_Background.png?fileID=2800000&amp;guid=5a66c92c4ebafc34b814296930d0302b&amp;type=3#Menu_Background&apos;); -unity-background-scale-mode: scale-and-crop;">
+        <ui:VisualElement name="MainMenuControls" style="padding-left: 0; flex-grow: 1; padding-right: 0; padding-top: 640px; padding-bottom: 0; -unity-text-align: upper-left; align-items: center; justify-content: center;">
+            <ui:Button display-tooltip-when-elided="true" name="StartNewBtn" style="background-image: url(&apos;project://database/Assets/Sprites/UI/Play.png?fileID=2800000&amp;guid=735ced47b08d67d4c8288553b80533c4&amp;type=3#Play&apos;); -unity-background-scale-mode: stretch-to-fill; width: 572px; height: 202px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-right: 0; margin-left: 20px;" />
+            <ui:Button display-tooltip-when-elided="true" name="QuitGameBtn" style="width: 572px; height: 202px; background-image: url(&apos;project://database/Assets/Sprites/UI/Quit.png?fileID=2800000&amp;guid=f02d4a231087f374dbfe2cc6e7ec720d&amp;type=3#Quit&apos;); padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 20px; margin-right: 0;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -302,3 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ca1e909b82b70746829efbc668d6189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playClickTexture: {fileID: 2800000, guid: 5f73ed39fa2d6214697eaecda6e04d2f, type: 3}
+  _playTexture: {fileID: 2800000, guid: 735ced47b08d67d4c8288553b80533c4, type: 3}
+  _quitClickTexture: {fileID: 2800000, guid: 60a183d19566b2847a198bd381d01ad1, type: 3}
+  _qiutTexture: {fileID: 2800000, guid: f02d4a231087f374dbfe2cc6e7ec720d, type: 3}

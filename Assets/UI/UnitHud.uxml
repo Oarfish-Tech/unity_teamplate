@@ -1,11 +1,12 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <ui:VisualElement name="UnitHud" class="EnemyHud" style="justify-content: flex-start; flex-grow: 1; padding-left: 32px; padding-right: 32px; padding-top: 32px; padding-bottom: 32px;">
-        <ui:VisualElement name="UnitHeader" style="align-items: auto; justify-content: space-between; flex-direction: row; padding-left: 20px; padding-right: 20px;">
-            <ui:Label text="Name" display-tooltip-when-elided="true" name="UnitName" style="color: rgb(255, 255, 255); font-size: 65px;" />
-            <ui:Label text="Lv. 10" display-tooltip-when-elided="true" name="UnitLevel" style="font-size: 65px; color: rgb(255, 255, 255);" />
+    <Style src="project://database/Assets/UI/UnitHudStyle.uss?fileID=7433441132597879392&amp;guid=44567d706922d06408b103f12fe5323a&amp;type=3#UnitHudStyle" />
+    <ui:VisualElement name="UnitHud" class="EnemyHud" style="justify-content: flex-start; flex-grow: 1; padding-left: 32px; padding-right: 32px; padding-top: 32px; padding-bottom: 0; margin-top: 18px;">
+        <ui:VisualElement name="UnitHeader" style="align-items: auto; justify-content: space-between; flex-direction: row; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
+            <ui:Label text="Disappointed Frog" display-tooltip-when-elided="true" name="UnitName" style="color: rgb(255, 255, 255); font-size: 45px;" />
+            <ui:Label text="Lv. 10" display-tooltip-when-elided="true" name="UnitLevel" style="font-size: 45px; color: rgb(255, 255, 255);" />
         </ui:VisualElement>
         <ui:VisualElement name="UnitHpBar" style="background-image: none; overflow: visible; height: 75px; -unity-background-scale-mode: stretch-to-fill; background-color: rgba(255, 255, 255, 0);">
-            <ui:VisualElement name="UnitHpFill" style="height: 100%; background-color: rgb(147, 0, 0); background-image: none; width: 25%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: relative; transition-property: all; transition-duration: 0s;" />
+            <ui:VisualElement name="UnitHpFill" style="height: 100%; background-color: rgb(147, 0, 0); background-image: none; width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: relative; transition-property: all; transition-duration: 0s;" />
             <ui:VisualElement name="UnitHpBorder" style="background-image: url(&apos;project://database/Assets/Sprites/UI/Bar.png?fileID=21300000&amp;guid=c8bbd02a88c2bbc41b7d7e50ec7b2aa7&amp;type=3#Bar&apos;); width: 100%; height: 100%; background-color: rgba(255, 255, 255, 0.1); position: absolute;" />
         </ui:VisualElement>
     </ui:VisualElement>

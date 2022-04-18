@@ -20,7 +20,7 @@
     color: white;
     overflow: scroll;
     white-space: normal;
-    font-size: 25px;
+    font-size: 30px;
 }
 
 .unity-base-field__input {

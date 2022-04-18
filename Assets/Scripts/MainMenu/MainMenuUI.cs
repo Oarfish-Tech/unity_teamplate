@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,10 @@ using UnityEngine.UIElements;
 public class MainMenuUI : MonoBehaviour
 {
     private VisualElement _rootEle;
+    public Texture2D _playClickTexture;
+    public Texture2D _playTexture;
+    public Texture2D _quitClickTexture;
+    public Texture2D _qiutTexture;
     public VisualElement RootElement
     {
         get
@@ -49,6 +54,7 @@ public class MainMenuUI : MonoBehaviour
 
     public void QuitGame()
     {
+        QuitGameBtn.style.backgroundImage = _quitClickTexture;
         Application.Quit();
     }
 
@@ -56,6 +62,16 @@ public class MainMenuUI : MonoBehaviour
     void Start()
     {
         QuitGameBtn.RegisterCallback<ClickEvent>(ev => QuitGame());
-        StartNewBtn.RegisterCallback<ClickEvent>(ev => SceneManager.LoadScene("BattleScene"));
+        QuitGameBtn.RegisterCallback<MouseEnterEvent>(ev => QuitGameBtn.style.backgroundImage = _quitClickTexture);
+        QuitGameBtn.RegisterCallback<MouseLeaveEvent>(ev => QuitGameBtn.style.backgroundImage = _qiutTexture);
+        StartNewBtn.RegisterCallback<ClickEvent>(ev => PlayGame());
+        StartNewBtn.RegisterCallback<MouseEnterEvent>(ev => StartNewBtn.style.backgroundImage = _playClickTexture);
+        StartNewBtn.RegisterCallback<MouseLeaveEvent>(ev => StartNewBtn.style.backgroundImage = _playTexture);
+    }
+
+    private void PlayGame()
+    {
+        StartNewBtn.style.backgroundImage= _playClickTexture;
+        SceneManager.LoadScene("BattleScene");
     }
 }

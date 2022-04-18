@@ -9,9 +9,20 @@ using System.Linq;
 public class BattleHud : MonoBehaviour
 {
     private BaseUI _baseUI;
-    private const float DIALOGUE_WAIT = 1f;
     private RadioButtonGroup _radioButtonGroup;
-    
+    private VisualElement _radioParent;
+    private Label _dialogueTextLabel;
+
+    public Label DialogueTextLabel
+    {
+        get 
+        {
+            if (_dialogueTextLabel == null)
+                _dialogueTextLabel = BaseUI.ControlContainer.Q<Label>("DialogueText");
+            return _dialogueTextLabel; 
+        }
+    }
+
     public BaseUI BaseUI
     {
         get
@@ -28,7 +39,10 @@ public class BattleHud : MonoBehaviour
         get
         {
             if (_radioButtonGroup == null)
+            {
                 _radioButtonGroup = BaseUI.RootElement.Q<RadioButtonGroup>("QuestionRadioGroup");
+                _radioParent = _radioButtonGroup.parent;
+            }
             return _radioButtonGroup;
         }
     }
@@ -49,7 +63,6 @@ public class BattleHud : MonoBehaviour
 
     private void SetUnitHp(VisualElement unitContainer, Unit unit)
     {
-        // StartCoroutine(HpDamageAnimation(unit, previousHp));
         unitContainer.Q<VisualElement>("UnitHpFill").style.width = GetHpPercent(unit.currentHP, unit.maxHP);
     }
 
@@ -61,10 +74,10 @@ public class BattleHud : MonoBehaviour
 
     public void SetDialogueText(string text)
     {
-        RadioButtonGroup.parent.style.display = DisplayStyle.None;
-        var dialogBox = BaseUI.ControlContainer.Q<Label>("DialogueText");
-        dialogBox.text = text;
-        dialogBox.style.display = DisplayStyle.Flex;
+        RadioButtonGroup.parent.Remove(RadioButtonGroup);
+        //RadioButtonGroup.style.display = DisplayStyle.None;
+        DialogueTextLabel.text = text;
+        DialogueTextLabel.style.display = DisplayStyle.Flex;
     }
 
     public void ShowResetBtn(Action onResetBtn)
@@ -84,12 +97,14 @@ public class BattleHud : MonoBehaviour
 
     public void DisplayQuestion(QuestionBuilder.Record record)
     {
-        var radioParent = RadioButtonGroup.parent;
-        BaseUI.ControlContainer.Q<Label>("DialogueText").style.display = DisplayStyle.None;
-        RadioButtonGroup.label = $"{record.question}:";
-        RadioButtonGroup.parent.Remove(RadioButtonGroup);
+        DialogueTextLabel.style.display = DisplayStyle.None;
+        if (_radioParent.Contains(RadioButtonGroup))
+        {
+            RadioButtonGroup.parent.Remove(RadioButtonGroup);
+        }
         RadioButtonGroup.value = -1;
-        radioParent.Add(RadioButtonGroup);
+        _radioParent.Add(RadioButtonGroup);
+        RadioButtonGroup.label = $"{record.question}:";
         RadioButtonGroup.choices = record.answers;
         RadioButtonGroup.parent.style.display = DisplayStyle.Flex;
         RadioButtonGroup.SetEnabled(true);

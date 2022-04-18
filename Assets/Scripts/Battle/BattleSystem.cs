@@ -6,11 +6,11 @@ using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
+public enum BattleState { START, QUESTION, MESSAGE, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
-    private const float DIALOGUE_WAIT = 3f;
     private int _questionIndex = 0;
+    private bool _newQuestion = true;
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
@@ -29,12 +29,11 @@ public class BattleSystem : MonoBehaviour
     public BattleHud battleHud;
     public QuestionBuilder questionBuilder;
     VisualElement rootHudEle;
-    VisualElement playerContainer;
-    VisualElement enemyContainer;
     VisualElement controlsContainer;
 
     public BattleState state;
     private int _currentEnemyIndex = 0;
+    private string _currentMessage = "";
 
     private void AnswerEvent(ChangeEvent<int> ev)
     {
@@ -42,33 +41,27 @@ public class BattleSystem : MonoBehaviour
     }
     public void SetupQuestion(QuestionBuilder.Record question)
     {
+        if (_newQuestion)
+        {
+            battleHud.DisplayQuestion(question);
+            _newQuestion = false;
+        }
         var radioGroup = battleHud.BaseUI.RootElement.Q<RadioButtonGroup>("QuestionRadioGroup");
-        battleHud.DisplayQuestion(question);
         radioGroup.RegisterValueChangedCallback(AnswerEvent);
     }
 
     // UIElement CallBack functions
     public void OnAnswer(bool isCorrect)
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.QUESTION)
             return;
 
         if (isCorrect)
         {
-            StartCoroutine(PlayerAttack());
-            _questionIndex++;
-            SetupQuestion(questionBuilder.GetQuestions().records[_questionIndex]);
+            PlayerAttack();
         }
         else
-            StartCoroutine(EnemyAttack());
-    }
-
-    private void OnHealBtn()
-    {
-        if (state != BattleState.PLAYERTURN)
-            return;
-
-        StartCoroutine(PlayerHeal());
+            EnemyAttack();
     }
 
     private void OnResetBtn()
@@ -88,8 +81,6 @@ public class BattleSystem : MonoBehaviour
 
         //get the root UIElement
         rootHudEle = battleHudDoc.rootVisualElement;
-
-        //set callbacks for the UI buttons
         controlsContainer = rootHudEle.Q<VisualElement>("ControlsContainer");
 
         var resetBtn = controlsContainer.Q<Button>("ResetBtn");
@@ -106,6 +97,14 @@ public class BattleSystem : MonoBehaviour
         BattleFsm();
     }
 
+    void DismissMessage(ClickEvent ev)
+    {
+        state = BattleState.QUESTION;
+        battleHud.BaseUI.RootElement.Q<VisualElement>("Background").UnregisterCallback<ClickEvent>(DismissMessage);
+        LoadEnemy();
+        BattleFsm();
+    }
+
     void BattleFsm()
     {
         switch (state)
@@ -114,12 +113,13 @@ public class BattleSystem : MonoBehaviour
                 SetupBattle();
                 break;
 
-            case BattleState.PLAYERTURN:
+            case BattleState.QUESTION:
                 PlayerTurn();
                 break;
 
-            case BattleState.ENEMYTURN:
-                EnemyTurn();
+            case BattleState.MESSAGE:
+                battleHud.SetDialogueText(_currentMessage);
+                battleHud.BaseUI.RootElement.Q<VisualElement>("Background").RegisterCallback<ClickEvent>(DismissMessage);
                 break;
 
             case BattleState.WON:
@@ -134,82 +134,51 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-    private IEnumerator WriteDialog(string message)
-    {
-        battleHud.SetDialogueText(message);
-        yield return new WaitForSeconds(DIALOGUE_WAIT);
-    }
-
     //Sets up the enemy and player UIs
     void SetupBattle()
+    {
+        if (_currentMessage == "")
+            _currentMessage = $"Monsters have challenged you to learn math!\n\nAnswer questions correctly to attack.\nIncorrect answers will cause the enemey to attack.\n\n Press anywhere to begin...";
+        
+        battleHud.SetUnitHud(playerUnit);
+        state = BattleState.MESSAGE;
+        BattleFsm();
+    }
+
+    private void LoadEnemy()
     {
         enemyPrefab = enemiesArray[_currentEnemyIndex];
         _enemyGO = Instantiate(enemyPrefab, battleStation);
         enemyUnit = _enemyGO.GetComponent<Unit>();
         enemyUnit.unitLevel = _currentEnemyIndex + 1;
-
-        rootHudEle = battleHudDoc.rootVisualElement;
-        battleHud.SetUnitHud(playerUnit);
+        rootHudEle = battleHudDoc.rootVisualElement;        
         battleHud.SetUnitHud(enemyUnit);
-        var questions = questionBuilder.GetQuestions().records;
-
-        WriteDialog($"{enemyUnit.unitName} challenges you to learn math!\n\nAnswer questions correctly to attack.\nIncorrect answers will cause the enemey to attack.");
-
-        SetupQuestion(questions[_questionIndex]);
-
-        state = BattleState.PLAYERTURN;
-        BattleFsm();
-    }
-
-    //Enemy and player turns
-    private void EnemyTurn()
-    {
-        StartCoroutine(EnemyAttack());
     }
 
     private void PlayerTurn()
     {
-        
+        SetupQuestion(questionBuilder.GetQuestions().records[_questionIndex]);
     }
 
     //Player and Enemy Attacks, each update the UI and call the BattleFSM
-    private IEnumerator PlayerAttack()
+    private void PlayerAttack()
     {
-        //battleHud.SetDialogueText($"You deal {playerUnit.damage} damage to {enemyUnit.unitName}");
-        var previousHp = enemyUnit.currentHP;
         var isDead = enemyUnit.TakeDamage(playerUnit.damage);
         StartCoroutine(enemyUnit.DamageAnimation());
         battleHud.SetUnitHp(enemyUnit);
+        _newQuestion = true;
+        _questionIndex++;
 
         if (isDead)
             state = BattleState.WON;
         else
-            state = BattleState.PLAYERTURN;
-
-        yield return new WaitForSeconds(DIALOGUE_WAIT);
+            state = BattleState.QUESTION;
 
         BattleFsm();
     }
 
-    private IEnumerator PlayerHeal()
+    private void EnemyAttack()
     {
-        const int healAmount = 2; //hardcoded heal for right now, will change later.
-        var previousHp = playerUnit.currentHP;
-        playerUnit.Heal(healAmount);
-        battleHud.SetUnitHp(playerUnit);
-        //battleHud.SetDialogueText($"You heal for {healAmount} points");
-
-        state = BattleState.ENEMYTURN;
-
-        yield return new WaitForSeconds(DIALOGUE_WAIT);
-
-        BattleFsm();
-    }
-
-    private IEnumerator EnemyAttack()
-    {
-        //battleHud.SetDialogueText($"{enemyUnit.unitName} uses Chomp!\n You take {enemyUnit.damage} damage.");
-        var previousHp = playerUnit.currentHP;
         var isDead = playerUnit.TakeDamage(enemyUnit.damage);
         StartCoroutine(enemyUnit.AttackAnimation());
         battleHud.SetUnitHp(playerUnit);
@@ -217,17 +186,9 @@ public class BattleSystem : MonoBehaviour
         if (isDead)
             state = BattleState.LOST;
         else
-            state = BattleState.PLAYERTURN;
-
-        yield return new WaitForSeconds(DIALOGUE_WAIT);
+            state = BattleState.QUESTION;
 
         BattleFsm();
-    }
-
-    private IEnumerator OnEnemyDefeat()
-    {
-        battleHud.SetDialogueText($"You have defeated an enemy!\n\nGet ready for the next one!");
-        yield return new WaitForSeconds(DIALOGUE_WAIT);
     }
 
     //Win lose methods
@@ -247,20 +208,21 @@ public class BattleSystem : MonoBehaviour
         else
         {
             Destroy(_enemyGO);
-            StartCoroutine(OnEnemyDefeat());
+            _currentMessage = $"You have defeated an enemy!\nGet ready for the next one!\n\nPress anywhere to begin...";
             _currentEnemyIndex++;
-            if (_currentEnemyIndex > 2)
+            if (_currentEnemyIndex > 2 && _currentEnemyIndex <= 5)
             {
                 background[0].SetActive(false);
                 background[1].SetActive(true);
                 background[2].SetActive(false);
-            } else if (_currentEnemyIndex > 5)
+            } 
+            if (_currentEnemyIndex > 5)
             {
                 background[0].SetActive(false);
                 background[1].SetActive(false);
                 background[2].SetActive(true);
             }
-            state = BattleState.START;
+            state = BattleState.MESSAGE;
             BattleFsm();
         }
     }
